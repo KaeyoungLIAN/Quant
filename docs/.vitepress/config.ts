@@ -16,6 +16,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '量化金融', link: '/quant-finance/' },
+      { text: '前置数学知识', link: '/prerequisite-math/' },
       { text: 'AI 技术与工具', link: '/ai/' },
       { text: '技术栈', link: '/tech-stack/' },
       { text: '资源收藏', link: '/resources/' },
@@ -25,9 +26,18 @@ export default defineConfig({
       '/quant-finance/': [
         {
           text: '量化金融',
+          collapsible: false,
           items: [
             { text: '概述', link: '/quant-finance/' },
-            { text: '必备数学知识', link: '/quant-finance/math-foundation' },
+          ],
+        },
+      ],
+      '/prerequisite-math/': [
+        {
+          text: '前置数学知识',
+          collapsible: false,
+          items: [
+            { text: '概述', link: '/prerequisite-math/' },
           ],
         },
       ],
