@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import markdownItKatex from 'markdown-it-katex'
 
 export default defineConfig({
   title: 'Quant Wiki',
@@ -8,7 +9,14 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css' }],
   ],
+
+  markdown: {
+    config: (md) => {
+      md.use(markdownItKatex)
+    }
+  },
 
   themeConfig: {
     logo: '/logo.svg',
@@ -26,7 +34,6 @@ export default defineConfig({
       '/quant-finance/': [
         {
           text: '量化金融',
-          collapsible: false,
           items: [
             { text: '概述', link: '/quant-finance/' },
           ],
@@ -35,7 +42,6 @@ export default defineConfig({
       '/prerequisite-math/': [
         {
           text: '前置数学知识',
-          collapsible: false,
           items: [
             { text: '概述', link: '/prerequisite-math/' },
           ],

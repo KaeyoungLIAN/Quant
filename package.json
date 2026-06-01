@@ -12,7 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/KaeyoungLIAN/Quant.git"
   },
-  "keywords": ["quant", "finance", "ai", "wiki"],
+  "keywords": [
+    "quant",
+    "finance",
+    "ai",
+    "wiki"
+  ],
   "author": "Kaeyoung",
   "license": "MIT",
   "bugs": {
@@ -22,5 +27,8 @@
   "dependencies": {
     "vitepress": "^1.6.0",
     "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "markdown-it-katex": "^2.0.3"
   }
 }
