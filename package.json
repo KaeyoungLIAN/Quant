@@ -1,0 +1,26 @@
+{
+  "name": "quant-wiki",
+  "version": "1.0.0",
+  "description": "量化 & AI 技术知识库",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaeyoungLIAN/Quant.git"
+  },
+  "keywords": ["quant", "finance", "ai", "wiki"],
+  "author": "Kaeyoung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KaeyoungLIAN/Quant/issues"
+  },
+  "homepage": "https://github.com/KaeyoungLIAN/Quant#readme",
+  "dependencies": {
+    "vitepress": "^2.0.0",
+    "vue": "^3.5.0"
+  }
+}
