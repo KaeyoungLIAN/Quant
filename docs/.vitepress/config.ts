@@ -27,6 +27,7 @@ export default defineConfig({
           text: '量化金融',
           items: [
             { text: '概述', link: '/quant-finance/' },
+            { text: '必备数学知识', link: '/quant-finance/math-foundation' },
           ],
         },
       ],
