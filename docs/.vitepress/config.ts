@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import markdownItKatex from 'markdown-it-katex'
+import { katex } from '@mdit/plugin-katex'
 
 export default defineConfig({
   title: 'Quant Wiki',
@@ -10,12 +10,11 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css' }],
-    ['style', {}, `.katex { vertical-align: -0.15em; } .katex-display { margin: 0.8em 0; }`],
   ],
 
   markdown: {
     config: (md) => {
-      md.use(markdownItKatex)
+      md.use(katex)
     }
   },
 
