@@ -51,7 +51,12 @@ $$
 \mathcal{L}(\mathbf{x}, \boldsymbol{\lambda}) = f(\mathbf{x}) + \sum_{i=1}^m \lambda_i g_i(\mathbf{x})
 $$
 
-最优解满足 KKT 条件（一阶必要条件）：
+最优解满足 **KKT 条件**（Karush–Kuhn–Tucker，一阶必要条件）：
+
+- 对于等式约束（如 $g(\boldsymbol{x}) = 0$）：拉格朗日乘子法，$\nabla f(\boldsymbol{x}) = \lambda \nabla g(\boldsymbol{x})$
+- 对于不等式约束（如 $g(\boldsymbol{x}) \le 0$）：多了一个**互补松弛条件** $\lambda \cdot g(\boldsymbol{x}) = 0$——要么约束紧贴边界（$g=0$），要么乘子为 0（约束不起作用）
+
+> **实际用途**：组合优化中"权重 $\ge 0$（不允许做空）"就是不等式约束，KKT 条件告诉你最优解在哪些约束边界上。你不需要手动解 KKT——求解器（如 cvxpy、scipy.optimize）会自动处理。
 
 $$
 \nabla_{\mathbf{x}} \mathcal{L} = \mathbf{0},\quad \nabla_{\boldsymbol{\lambda}} \mathcal{L} = \mathbf{0}
