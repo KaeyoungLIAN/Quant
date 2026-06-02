@@ -213,6 +213,7 @@ export default defineConfig({
           text: 'AI 技术与工具',
           items: [
             { text: '概述', link: '/ai/' },
+            { text: 'CloakBrowser 反检测浏览器', link: '/ai/cloak-browser' },
           ],
         },
       ],
