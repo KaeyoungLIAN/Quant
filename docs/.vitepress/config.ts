@@ -50,6 +50,7 @@ export default defineConfig({
           text: '01 高等数学',
           collapsed: true,
           items: [
+            { text: '概述', link: '/prerequisite-math/01-calculus/0.0-overview' },
             { text: '1.1 极限与连续', link: '/prerequisite-math/01-calculus/1.1-limits-and-continuity' },
             { text: '1.2 导数与微分', link: '/prerequisite-math/01-calculus/1.2-derivatives' },
             { text: '1.3 积分学', link: '/prerequisite-math/01-calculus/1.3-integration' },
@@ -60,6 +61,7 @@ export default defineConfig({
           text: '02 线性代数',
           collapsed: true,
           items: [
+            { text: '概述', link: '/prerequisite-math/02-linear-algebra/0.0-overview' },
             { text: '2.1 向量与矩阵', link: '/prerequisite-math/02-linear-algebra/2.1-vectors-matrices' },
             { text: '2.2 线性方程组', link: '/prerequisite-math/02-linear-algebra/2.2-linear-equations' },
             { text: '2.3 正定矩阵与二次型', link: '/prerequisite-math/02-linear-algebra/2.3-positive-definite' },
@@ -72,6 +74,7 @@ export default defineConfig({
           text: '03 概率论',
           collapsed: true,
           items: [
+            { text: '概述', link: '/prerequisite-math/03-probability/0.0-overview' },
             { text: '3.1 概率空间与条件概率', link: '/prerequisite-math/03-probability/3.1-probability-space' },
             { text: '3.2 随机变量与分布', link: '/prerequisite-math/03-probability/3.2-random-variables' },
             { text: '3.3 期望、方差与条件期望', link: '/prerequisite-math/03-probability/3.3-expectation-variance' },
@@ -83,6 +86,7 @@ export default defineConfig({
           text: '04 数理统计',
           collapsed: true,
           items: [
+            { text: '概述', link: '/prerequisite-math/04-statistics/0.0-overview' },
             { text: '4.1 参数估计', link: '/prerequisite-math/04-statistics/4.1-parameter-estimation' },
             { text: '4.2 假设检验', link: '/prerequisite-math/04-statistics/4.2-hypothesis-testing' },
             { text: '4.3 方差分析(ANOVA)', link: '/prerequisite-math/04-statistics/4.3-anova' },
@@ -94,7 +98,7 @@ export default defineConfig({
           text: '05 最优化理论',
           collapsed: true,
           items: [
-            { text: '概述', link: '/prerequisite-math/05-optimization/' },
+            { text: '概述', link: '/prerequisite-math/05-optimization/0.0-overview' },
             { text: '5.1 梯度下降与凸优化', link: '/prerequisite-math/05-optimization/5.1-gradient-descent' },
             { text: '5.2 拉格朗日乘数法与KKT条件', link: '/prerequisite-math/05-optimization/5.2-lagrange-multiplier' },
             { text: '5.3 牛顿法', link: '/prerequisite-math/05-optimization/5.3-newton-method' },
@@ -106,7 +110,7 @@ export default defineConfig({
           text: '06 随机过程',
           collapsed: true,
           items: [
-            { text: '概述', link: '/prerequisite-math/06-stochastic-processes/' },
+            { text: '概述', link: '/prerequisite-math/06-stochastic-processes/0.0-overview' },
             { text: '6.1 随机过程基本概念', link: '/prerequisite-math/06-stochastic-processes/6.1-basics' },
             { text: '6.2 随机游走', link: '/prerequisite-math/06-stochastic-processes/6.2-random-walk' },
             { text: '6.3 布朗运动', link: '/prerequisite-math/06-stochastic-processes/6.3-brownian-motion' },
@@ -117,7 +121,7 @@ export default defineConfig({
           text: '07 信息论',
           collapsed: true,
           items: [
-            { text: '概述', link: '/prerequisite-math/07-information-theory/' },
+            { text: '概述', link: '/prerequisite-math/07-information-theory/0.0-overview' },
             { text: '7.1 熵', link: '/prerequisite-math/07-information-theory/7.1-entropy' },
             { text: '7.2 KL散度与交叉熵', link: '/prerequisite-math/07-information-theory/7.2-kld-cross-entropy' },
             { text: '7.3 互信息', link: '/prerequisite-math/07-information-theory/7.3-mutual-information' },
@@ -128,7 +132,7 @@ export default defineConfig({
           text: '08 傅里叶分析',
           collapsed: true,
           items: [
-            { text: '概述', link: '/prerequisite-math/08-fourier-analysis/' },
+            { text: '概述', link: '/prerequisite-math/08-fourier-analysis/0.0-overview' },
             { text: '8.1 傅里叶级数', link: '/prerequisite-math/08-fourier-analysis/8.1-fourier-series' },
             { text: '8.2 傅里叶变换', link: '/prerequisite-math/08-fourier-analysis/8.2-fourier-transform' },
             { text: '8.3 频谱分析', link: '/prerequisite-math/08-fourier-analysis/8.3-spectral-analysis' },
@@ -139,7 +143,7 @@ export default defineConfig({
           text: '09 数值计算',
           collapsed: true,
           items: [
-            { text: '概述', link: '/prerequisite-math/09-numerical-computing/' },
+            { text: '概述', link: '/prerequisite-math/09-numerical-computing/0.0-overview' },
             { text: '9.1 浮点精度', link: '/prerequisite-math/09-numerical-computing/9.1-floating-point' },
             { text: '9.2 根求解', link: '/prerequisite-math/09-numerical-computing/9.2-root-finding' },
             { text: '9.3 数值积分', link: '/prerequisite-math/09-numerical-computing/9.3-numerical-integration' },
@@ -150,7 +154,7 @@ export default defineConfig({
           text: '10 图论基础',
           collapsed: true,
           items: [
-            { text: '概述', link: '/prerequisite-math/10-graph-theory/' },
+            { text: '概述', link: '/prerequisite-math/10-graph-theory/0.0-overview' },
             { text: '10.1 图的基本概念', link: '/prerequisite-math/10-graph-theory/10.1-graph-basics' },
             { text: '10.2 最短路径', link: '/prerequisite-math/10-graph-theory/10.2-shortest-path' },
             { text: '10.3 最小生成树', link: '/prerequisite-math/10-graph-theory/10.3-minimum-spanning-tree' },
