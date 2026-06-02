@@ -33,9 +33,55 @@ export default defineConfig({
     sidebar: {
       '/quant-finance/': [
         {
-          text: '量化金融',
+          text: '01 量化交易基础',
+          collapsed: true,
           items: [
             { text: '概述', link: '/quant-finance/' },
+            { text: '1.0 量化交易的本质', link: '/quant-finance/1.0-overview' },
+            { text: '1.1 交易品种', link: '/quant-finance/1.1-market-instruments' },
+            { text: '1.2 订单类型与市场机制', link: '/quant-finance/1.2-order-types' },
+          ],
+        },
+        {
+          text: '02 组合管理与风险',
+          collapsed: true,
+          items: [
+            { text: '2.0 组合收益与风险', link: '/quant-finance/2.0-portfolio-risk-return' },
+            { text: '2.1 有效前沿与最优组合', link: '/quant-finance/2.1-efficient-frontier' },
+            { text: '2.2 夏普比率与绩效度量', link: '/quant-finance/2.2-sharpe-ratio' },
+            { text: '2.3 因子模型', link: '/quant-finance/2.3-factor-models' },
+          ],
+        },
+        {
+          text: '03 衍生品与定价',
+          collapsed: true,
+          items: [
+            { text: '3.0 货币时间价值', link: '/quant-finance/3.0-time-value-of-money' },
+            { text: '3.1 债券定价与久期', link: '/quant-finance/3.1-bond-pricing' },
+            { text: '3.2 期货定价', link: '/quant-finance/3.2-futures-pricing' },
+            { text: '3.3 期权基础', link: '/quant-finance/3.3-options-intro' },
+            { text: '3.4 Black-Scholes 定价模型', link: '/quant-finance/3.4-black-scholes' },
+            { text: '3.5 Greeks 与风险管理', link: '/quant-finance/3.5-options-greeks' },
+            { text: '3.6 期权策略', link: '/quant-finance/3.6-options-strategies' },
+          ],
+        },
+        {
+          text: '04 策略与回测',
+          collapsed: true,
+          items: [
+            { text: '4.0 趋势跟踪策略', link: '/quant-finance/4.0-strategy-trend' },
+            { text: '4.1 均值回归策略', link: '/quant-finance/4.1-strategy-mean-reversion' },
+            { text: '4.2 回测框架与方法论', link: '/quant-finance/4.2-backtesting' },
+            { text: '4.3 绩效评估指标', link: '/quant-finance/4.3-performance-metrics' },
+          ],
+        },
+        {
+          text: '05 市场微观结构',
+          collapsed: true,
+          items: [
+            { text: '5.0 市场微观结构', link: '/quant-finance/5.0-market-microstructure' },
+            { text: '5.1 订单簿分析', link: '/quant-finance/5.1-order-book-analysis' },
+            { text: '5.2 执行算法', link: '/quant-finance/5.2-execution-algorithms' },
           ],
         },
       ],
