@@ -9,11 +9,11 @@ description: "无约束优化、约束优化（拉格朗日乘数法）、牛顿
 
 ## 章节内容
 
-- [05.0 概述](./0.0-overview) — 本章的学习地图、知识链条与量化应用全景
+- [05.0 概述](./05.0-overview) — 本章的学习地图、知识链条与量化应用全景
 - [5.1 梯度下降与凸优化](./5.1-gradient-descent) — 无约束优化的基本方法，凸性保证全局收敛
 - [5.2 拉格朗日乘数法与 KKT 条件](./5.2-lagrange-multiplier) — 约束优化的标准工具，Markowitz 模型的解析基础
 - [5.3 牛顿法](./5.3-newton-method) — 利用 Hessian 的二阶优化，超线性收敛
 - [5.4 组合优化与风险预算](./5.4-portfolio-optimization) — 均值-方差模型、有效前沿、风险贡献分解
 - [5.5 Python 实践](./5.5-python-practice) — scipy.optimize 与 cvxpy 实现组合优化
 
-> **下一步**：从 [05.0 概述](./0.0-overview) 开始，了解本章全貌。
+> **下一步**：从 [05.0 概述](./05.0-overview) 开始，了解本章全貌。
