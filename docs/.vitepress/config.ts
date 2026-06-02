@@ -95,6 +95,11 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '概述', link: '/prerequisite-math/05-optimization/' },
+            { text: '5.1 梯度下降与凸优化', link: '/prerequisite-math/05-optimization/5.1-gradient-descent' },
+            { text: '5.2 拉格朗日乘数法与KKT条件', link: '/prerequisite-math/05-optimization/5.2-lagrange-multiplier' },
+            { text: '5.3 牛顿法', link: '/prerequisite-math/05-optimization/5.3-newton-method' },
+            { text: '5.4 组合优化与风险预算', link: '/prerequisite-math/05-optimization/5.4-portfolio-optimization' },
+            { text: '5.5 Python实践', link: '/prerequisite-math/05-optimization/5.5-python-practice' },
           ],
         },
         {
@@ -102,6 +107,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '概述', link: '/prerequisite-math/06-stochastic-processes/' },
+            { text: '6.1 随机过程基本概念', link: '/prerequisite-math/06-stochastic-processes/6.1-basics' },
+            { text: '6.2 随机游走', link: '/prerequisite-math/06-stochastic-processes/6.2-random-walk' },
+            { text: '6.3 布朗运动', link: '/prerequisite-math/06-stochastic-processes/6.3-brownian-motion' },
+            { text: '6.4 鞅', link: '/prerequisite-math/06-stochastic-processes/6.4-martingale' },
           ],
         },
         {
@@ -109,6 +118,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '概述', link: '/prerequisite-math/07-information-theory/' },
+            { text: '7.1 熵', link: '/prerequisite-math/07-information-theory/7.1-entropy' },
+            { text: '7.2 KL散度与交叉熵', link: '/prerequisite-math/07-information-theory/7.2-kld-cross-entropy' },
+            { text: '7.3 互信息', link: '/prerequisite-math/07-information-theory/7.3-mutual-information' },
+            { text: '7.4 最大熵原理与量化应用', link: '/prerequisite-math/07-information-theory/7.4-maximum-entropy' },
           ],
         },
         {
@@ -116,6 +129,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '概述', link: '/prerequisite-math/08-fourier-analysis/' },
+            { text: '8.1 傅里叶级数', link: '/prerequisite-math/08-fourier-analysis/8.1-fourier-series' },
+            { text: '8.2 傅里叶变换', link: '/prerequisite-math/08-fourier-analysis/8.2-fourier-transform' },
+            { text: '8.3 频谱分析', link: '/prerequisite-math/08-fourier-analysis/8.3-spectral-analysis' },
+            { text: '8.4 量化金融应用', link: '/prerequisite-math/08-fourier-analysis/8.4-quant-applications' },
           ],
         },
         {
@@ -123,6 +140,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '概述', link: '/prerequisite-math/09-numerical-computing/' },
+            { text: '9.1 浮点精度', link: '/prerequisite-math/09-numerical-computing/9.1-floating-point' },
+            { text: '9.2 根求解', link: '/prerequisite-math/09-numerical-computing/9.2-root-finding' },
+            { text: '9.3 数值积分', link: '/prerequisite-math/09-numerical-computing/9.3-numerical-integration' },
+            { text: '9.4 数值Greeks', link: '/prerequisite-math/09-numerical-computing/9.4-numerical-greeks' },
           ],
         },
         {
@@ -130,6 +151,10 @@ export default defineConfig({
           collapsed: true,
           items: [
             { text: '概述', link: '/prerequisite-math/10-graph-theory/' },
+            { text: '10.1 图的基本概念', link: '/prerequisite-math/10-graph-theory/10.1-graph-basics' },
+            { text: '10.2 最短路径', link: '/prerequisite-math/10-graph-theory/10.2-shortest-path' },
+            { text: '10.3 最小生成树', link: '/prerequisite-math/10-graph-theory/10.3-minimum-spanning-tree' },
+            { text: '10.4 网络中心性', link: '/prerequisite-math/10-graph-theory/10.4-network-centrality' },
           ],
         },
       ],
