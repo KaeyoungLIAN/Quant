@@ -227,6 +227,55 @@ export default defineConfig({
             { text: '概述', link: '/tech-stack/' },
           ],
         },
+        {
+          text: '📥 数据采集与清洗',
+          collapsed: true,
+          items: [
+            { text: 'Python 工具库', link: '/tech-stack/data-tools' },
+          ],
+        },
+        {
+          text: '🗄️ 数据存储与分析引擎',
+          collapsed: true,
+          items: [
+            { text: '时序/分析数据库', link: '/tech-stack/data-engines' },
+          ],
+        },
+        {
+          text: '📊 数据集成与可视化',
+          collapsed: true,
+          items: [
+            { text: '平台框架', link: '/tech-stack/data-platforms' },
+          ],
+        },
+        {
+          text: '🐍 Python 生态',
+          collapsed: true,
+          items: [
+            { text: 'NumPy/Pandas', link: '/tech-stack/python-ecosystem' },
+          ],
+        },
+        {
+          text: '🌐 Web 框架',
+          collapsed: true,
+          items: [
+            { text: 'Django/FastAPI', link: '/tech-stack/web-frameworks' },
+          ],
+        },
+        {
+          text: '🐳 部署运维',
+          collapsed: true,
+          items: [
+            { text: 'Docker/CI/CD', link: '/tech-stack/deployment' },
+          ],
+        },
+        {
+          text: '🛠️ 开发工具',
+          collapsed: true,
+          items: [
+            { text: 'Git/VS Code', link: '/tech-stack/dev-tools' },
+          ],
+        },
       ],
       '/resources/': [
         {
