@@ -235,6 +235,48 @@ export default defineConfig({
             { text: '资料索引', link: '/resources/' },
           ],
         },
+        {
+          text: '📖 书籍',
+          collapsed: true,
+          items: [
+            { text: '全部书籍', link: '/resources/books' },
+          ],
+        },
+        {
+          text: '📄 论文',
+          collapsed: true,
+          items: [
+            { text: '全部论文', link: '/resources/papers' },
+          ],
+        },
+        {
+          text: '🔗 博客与文章',
+          collapsed: true,
+          items: [
+            { text: '全部博客', link: '/resources/blogs' },
+          ],
+        },
+        {
+          text: '🎬 视频课程',
+          collapsed: true,
+          items: [
+            { text: '全部视频', link: '/resources/videos' },
+          ],
+        },
+        {
+          text: '💻 开源项目',
+          collapsed: true,
+          items: [
+            { text: '全部项目', link: '/resources/projects' },
+          ],
+        },
+        {
+          text: '📊 数据集与数据源',
+          collapsed: true,
+          items: [
+            { text: '全部数据源', link: '/resources/datasets' },
+          ],
+        },
       ],
     },
 
