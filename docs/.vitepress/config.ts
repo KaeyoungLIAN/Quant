@@ -225,55 +225,13 @@ export default defineConfig({
           text: '技术栈',
           items: [
             { text: '概述', link: '/tech-stack/' },
-          ],
-        },
-        {
-          text: '📥 数据采集与清洗',
-          collapsed: true,
-          items: [
-            { text: 'Python 工具库', link: '/tech-stack/data-tools' },
-          ],
-        },
-        {
-          text: '🗄️ 数据存储与分析引擎',
-          collapsed: true,
-          items: [
-            { text: '时序/分析数据库', link: '/tech-stack/data-engines' },
-          ],
-        },
-        {
-          text: '📊 数据集成与可视化',
-          collapsed: true,
-          items: [
-            { text: '平台框架', link: '/tech-stack/data-platforms' },
-          ],
-        },
-        {
-          text: '🐍 Python 生态',
-          collapsed: true,
-          items: [
-            { text: 'NumPy/Pandas', link: '/tech-stack/python-ecosystem' },
-          ],
-        },
-        {
-          text: '🌐 Web 框架',
-          collapsed: true,
-          items: [
-            { text: 'Django/FastAPI', link: '/tech-stack/web-frameworks' },
-          ],
-        },
-        {
-          text: '🐳 部署运维',
-          collapsed: true,
-          items: [
-            { text: 'Docker/CI/CD', link: '/tech-stack/deployment' },
-          ],
-        },
-        {
-          text: '🛠️ 开发工具',
-          collapsed: true,
-          items: [
-            { text: 'Git/VS Code', link: '/tech-stack/dev-tools' },
+            { text: '📥 数据采集与清洗', link: '/tech-stack/data-tools' },
+            { text: '🗄️ 数据存储与分析引擎', link: '/tech-stack/data-engines' },
+            { text: '📊 数据集成与可视化', link: '/tech-stack/data-platforms' },
+            { text: '🐍 Python 生态', link: '/tech-stack/python-ecosystem' },
+            { text: '🌐 Web 框架', link: '/tech-stack/web-frameworks' },
+            { text: '🐳 部署运维', link: '/tech-stack/deployment' },
+            { text: '🛠️ 开发工具', link: '/tech-stack/dev-tools' },
           ],
         },
       ],
@@ -282,48 +240,12 @@ export default defineConfig({
           text: '资源收藏',
           items: [
             { text: '资料索引', link: '/resources/' },
-          ],
-        },
-        {
-          text: '📖 书籍',
-          collapsed: true,
-          items: [
-            { text: '全部书籍', link: '/resources/books' },
-          ],
-        },
-        {
-          text: '📄 论文',
-          collapsed: true,
-          items: [
-            { text: '全部论文', link: '/resources/papers' },
-          ],
-        },
-        {
-          text: '🔗 博客与文章',
-          collapsed: true,
-          items: [
-            { text: '全部博客', link: '/resources/blogs' },
-          ],
-        },
-        {
-          text: '🎬 视频课程',
-          collapsed: true,
-          items: [
-            { text: '全部视频', link: '/resources/videos' },
-          ],
-        },
-        {
-          text: '💻 开源项目',
-          collapsed: true,
-          items: [
-            { text: '全部项目', link: '/resources/projects' },
-          ],
-        },
-        {
-          text: '📊 数据集与数据源',
-          collapsed: true,
-          items: [
-            { text: '全部数据源', link: '/resources/datasets' },
+            { text: '📖 书籍', link: '/resources/books' },
+            { text: '📄 论文', link: '/resources/papers' },
+            { text: '🔗 博客与文章', link: '/resources/blogs' },
+            { text: '🎬 视频课程', link: '/resources/videos' },
+            { text: '💻 开源项目', link: '/resources/projects' },
+            { text: '📊 数据集与数据源', link: '/resources/datasets' },
           ],
         },
       ],
