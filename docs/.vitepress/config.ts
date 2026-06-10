@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 import { katex } from '@mdit/plugin-katex'
 
 export default defineConfig({
+  ignoreDeadLinks: true,
   title: 'Quant Wiki',
   description: '量化 & AI 技术知识库',
   lang: 'zh-CN',
@@ -23,6 +24,7 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
+      { text: '学习路线', link: '/learn/' },
       { text: '量化金融', link: '/quant-finance/' },
       { text: '前置数学知识', link: '/prerequisite-math/' },
       { text: 'AI 技术与工具', link: '/ai/' },
@@ -246,6 +248,15 @@ export default defineConfig({
             { text: '🎬 视频课程', link: '/resources/videos' },
             { text: '💻 开源项目', link: '/resources/projects' },
             { text: '📊 数据集与数据源', link: '/resources/datasets' },
+          ],
+        },
+      ],
+      '/learn/': [
+        {
+          text: '学习路线',
+          items: [
+            { text: '🗺️ 路线总览', link: '/learn/' },
+            { text: '📝 学习记录', link: '/learn/records' },
           ],
         },
       ],

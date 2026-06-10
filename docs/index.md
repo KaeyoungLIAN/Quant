@@ -24,6 +24,9 @@ hero:
       link: https://github.com/KaeyoungLIAN/Quant
 
 features:
+  - title: 🗺️ 学习路线
+    details: 从零到独立策略开发的个性化方案，数学搭桥→核心能力→实战，配合视频与 Wiki 内容。
+    link: /learn/
   - title: 📈 量化金融
     details: 策略模型、回测框架、风险管理、市场微观结构。从基础概念到实战经验，系统化整理。
     link: /quant-finance/
