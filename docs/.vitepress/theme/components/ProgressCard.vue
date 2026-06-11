@@ -61,8 +61,7 @@ function sectionSlug(key) {
 }
 
 const currentLink = computed(() => {
-  const ch = current.value.chapter_key.split('.')[0]
-  return '/learn/' + String(ch).padStart(2, '0') + '-' + chapterSlug(current.value.chapter_key) + '/' + sectionSlug(current.value.chapter_key)
+  return '/learn/' + chapterSlug(current.value.chapter_key) + '/' + sectionSlug(current.value.chapter_key)
 })
 
 const greeting = computed(() => {
