@@ -11,28 +11,19 @@ hero:
     alt: Quant Learning
   actions:
     - theme: brand
-      text: 开始学习
+      text: 学习路线
       link: /learn/
     - theme: alt
       text: 知识文库
       link: /quant-finance/
     - theme: alt
-      text: 数学起步
-      link: /prerequisite-math/
-    - theme: alt
       text: GitHub
       link: https://github.com/KaeyoungLIAN/Quant
 
 features:
-  - title: 🗺️ 学习路线
-    details: 从零到独立策略开发的个性化方案，数学搭桥→核心能力→实战，配合视频与 Wiki 内容。
-    link: /learn/
   - title: 📈 量化金融
     details: 策略模型、回测框架、风险管理、市场微观结构。从基础概念到实战经验，系统化整理。
     link: /quant-finance/
-  - title: 🔢 前置数学知识
-    details: 教材级量化 & AI 必备数学，配 Python 示例。极限、导数、线代、概率、统计、时间序列...
-    link: /prerequisite-math/
   - title: 🤖 AI 技术与工具
     details: LLM、AI Agent、RAG、数据爬取分析。关注与量化交易结合的前沿 AI 工具。
     link: /ai/
@@ -43,6 +34,8 @@ features:
     details: 优质书籍、论文、博客、数据集、开源项目。持续更新的学习资料索引。
     link: /resources/
 ---
+
+<ProgressCard />
 
 <style>
 :root {

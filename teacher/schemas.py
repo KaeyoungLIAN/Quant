@@ -1,67 +1,39 @@
-from pydantic import BaseModel, Field
-from typing import Optional, List
-from datetime import datetime
+from pydantic import BaseModel
+from typing import Optional
 
 
-# ─── Auth ────────────────────────────────────────────────────────
-
-class RegisterRequest(BaseModel):
-    username: str = Field(min_length=2, max_length=50)
-    password: str = Field(min_length=4, max_length=128)
-
-class LoginRequest(BaseModel):
-    username: str
-    password: str
-
-class TokenResponse(BaseModel):
-    token: str
-    user_id: int
-    username: str
-
-class UserProfile(BaseModel):
-    mission: str = ""
-    math_level: int = Field(default=1, ge=1, le=5)
-    python_level: int = Field(default=3, ge=1, le=5)
-    finance_level: int = Field(default=1, ge=1, le=5)
+class ChapterProgress(BaseModel):
+    chapter_key: str
+    status: str                     # locked | in_progress | completed
+    sub_items_done: list[str]       # ["mcq_1", "mcq_3", "essay_1"]
 
 
-# ─── Teacher ─────────────────────────────────────────────────────
+class ProgressResponse(BaseModel):
+    chapters: list[ChapterProgress]
+    last_visited: Optional[str] = None
 
-class ModuleProgress(BaseModel):
-    module_key: str
-    status: str
-    confidence: int
 
-class TeacherStatus(BaseModel):
-    phase: str                              # "one" | "two" | "three"
-    phase_name: str
-    overall_progress: float                 # 0-100
-    modules: List[ModuleProgress]
-    current_module: Optional[str] = None    # 推荐下一步
-    current_topic: Optional[str] = None
-    summary: str                            # 一句话总结
+class AdvanceRequest(BaseModel):
+    chapter_key: str
+    sub_item: str                   # "mcq_1" | "essay_1"
 
-class LessonResponse(BaseModel):
-    lesson_id: int
-    title: str
-    html_content: str
-    checkpoint: str
 
-class CheckpointRequest(BaseModel):
-    lesson_id: int
+class JudgeRequest(BaseModel):
+    chapter_key: str
+    question: str
+    answer: str
+
+
+class JudgeResponse(BaseModel):
     passed: bool
-    notes: str = ""
+    feedback: str
+    suggestions: list[str] = []
+
 
 class ChatRequest(BaseModel):
     message: str
+    context: Optional[dict] = None   # {chapter_key, progress}
+
 
 class ChatResponse(BaseModel):
     reply: str
-
-class LearningRecordOut(BaseModel):
-    id: int
-    module_key: str
-    session_date: datetime
-    content: str
-    notes: str
-    checkpoint_passed: bool
