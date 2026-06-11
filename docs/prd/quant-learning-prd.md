@@ -46,16 +46,25 @@
   2.4 风险入门：波动率、回撤、最大回撤
 
 第三章：数学工具箱
-  3.1 线性代数：向量、矩阵、特征值、SVD/PCA
-  3.2 概率论：分布、期望、CLT、蒙特卡洛
-  3.3 统计学：回归、假设检验、时间序列
-  3.4 微积分：导数、梯度、优化
+  3.0 概述（MIT 18.S096 路线图）
+  3.1 L1+L2 线性代数与向量化
+  3.2 L3 概率论与蒙特卡洛
+  3.3 L4 矩阵分解与 SVD
+  3.4 L5 随机过程与布朗运动
+  3.5 L6 回归分析与假设检验
+  3.6 L7+L13 VaR 与商品模型
+  3.7 L8+L11+L12 时间序列分析
+  3.8 L9 波动率建模（GARCH）
+  3.9 L10 正则化与风险模型
+  3.10 L14-16 组合理论与 CAPM
 
-第四章：Python 量化编程
-  4.1 NumPy/Pandas 数据处理
-  4.2 数据获取与清洗（yfinance、多数据源）
-  4.3 可视化（mplfinance、plotly）
-  4.4 回测框架（事件驱动 vs 向量化）
+  每节对应 MIT 18.S096 1-2 节课。先看 MIT 视频，然后用 Python 代码验证理解。每节包含：公式定义 → 手算例子 → Python 代码 → 练习。
+
+第四章：量化编程速成
+  4.1 NumPy 基础（向量、矩阵运算）
+  4.2 Pandas 数据处理（DataFrame、时间索引）
+  4.3 yfinance 数据获取与清洗
+  4.4 可视化与回测骨架
 
 第五章：经典策略
   5.1 趋势跟踪：均线、动量、MACD
@@ -558,14 +567,11 @@ Cloudflare Tunnel → 外网访问
 | 1.3 画 K 线图 | `part-1-backtest/01-from-data-to-candles.md` | 精简 |
 | 1.4 设定目标 | 无 | 全新 |
 | 2.1-2.4 金融扫盲 | `quant-finance/1.*`, `quant-finance/3.0*` | 从 Wiki 提取+改写为教程格式 |
-| 3.1 线性代数 | `part-0-python-math/01-linear-algebra.md`, `03-matrix-factorization.md` | 合并+精简 |
-| 3.2 概率论 | `part-0-python-math/02-probability-monte-carlo.md` | 保留 |
-| 3.3 统计学 | `part-0-python-math/05-regression.md`, 部分 `07-time-series.md` | 合并 |
-| 3.4 微积分 | `prerequisite-math/01-calculus/1.2-derivatives.md` 等 | 提取+重写为 Python 风格 |
-| 4.1 NumPy/Pandas | `part-0-python-math/01-linear-algebra.md` 的 NumPy 部分 | 剥离+扩展 |
-| 4.2 数据清洗 | `part-1-backtest/01-from-data-to-candles.md`, `part-5-live/01-data-sources.md` | 合并 |
-| 4.3 可视化 | 无独立章节 | 从各章代码中提取 |
-| 4.4 回测框架 | `part-1-backtest/02-first-backtest.md` | 保留 |
+| 3.0-3.10 数学工具箱 | `part-0-python-math/` 全部 10 章 | 保留，直接搬过去 |
+| 4.1 NumPy 基础 | `part-0-python-math/01-linear-algebra.md` 的 NumPy 部分 | 剥离+精简 |
+| 4.2 Pandas 处理 | `part-0-python-math/01-linear-algebra.md` 的 DataFrame 部分 | 剥离+精简 |
+| 4.3 yfinance 数据 | `part-1-backtest/01-from-data-to-candles.md` | 精简，去掉 K 线图（移到第一章） |
+| 4.4 可视化+回测骨架 | `part-1-backtest/02-first-backtest.md`（回测部分）+ 代码片段 | 精简 |
 | 5.1 趋势跟踪 | `part-2-strategies/01-trend-following.md` | 保留 |
 | 5.2 均值回归 | `part-2-strategies/02-mean-reversion.md` | 保留 |
 | 5.3 统计套利 | `part-2-strategies/03-statistical-arbitrage.md` | 保留 |
