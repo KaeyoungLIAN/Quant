@@ -5,14 +5,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent  # Quant project root
 
-# Load .env file
-_env_path = ROOT / "teacher" / '.env'
-if _env_path.exists():
-    for line in _env_path.read_text().splitlines():
-        line = line.strip()
-        if line and '=' in line and not line.startswith('#'):
-            k, v = line.split('=', 1)
-            os.environ[k] = v
+# Load .env file using python-dotenv (if available)
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT / "teacher" / ".env")
+except ImportError:
+    # Fallback: manual parsing
+    _env_path = ROOT / "teacher" / ".env"
+    if _env_path.exists():
+        for line in _env_path.read_text().splitlines():
+            line = line.strip()
+            if line and "=" in line and not line.startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ[k.strip()] = v.strip()
 
 import uvicorn
 from fastapi import FastAPI, Depends, HTTPException, Request
@@ -81,7 +86,6 @@ def init_progress(db: Session):
             p = Progress(
                 chapter_key=key,
                 status=status,
-                sub_items_done="[]",
                 updated_at=func.now(),
             )
             db.add(p)
@@ -105,7 +109,6 @@ def compute_progress(db: Session) -> ProgressResponse:
     last_visited = None
     for i, key in enumerate(CHAPTERS):
         r = row_map.get(key)
-        sub_items = json.loads(r.sub_items_done) if r and r.sub_items_done else []
         status = r.status if r else "locked"
 
         # Lock/unlock logic: only the first incomplete chapter is "in_progress"
@@ -120,7 +123,6 @@ def compute_progress(db: Session) -> ProgressResponse:
         chapters.append(ChapterProgress(
             chapter_key=key,
             status=status,
-            sub_items_done=sub_items,
         ))
 
         if status == "in_progress":
@@ -158,17 +160,11 @@ def advance_progress(req: AdvanceRequest, db: Session = Depends(get_db)):
     if not p:
         raise HTTPException(404, "Chapter not found")
 
-    sub_items = json.loads(p.sub_items_done)
-    if req.sub_item not in sub_items:
-        sub_items.append(req.sub_item)
-        p.sub_items_done = json.dumps(sub_items)
-        p.updated_at = func.now()
-
-    # Mark chapter completed on any advance
     p.status = "completed"
+    p.updated_at = func.now()
     db.commit()
 
-    return {"ok": True, "chapter_key": req.chapter_key, "sub_items_done": sub_items}
+    return {"ok": True, "chapter_key": req.chapter_key, "status": "completed"}
 
 
 # ─── API: AI Judge ──────────────────────────────────────────────
@@ -203,7 +199,11 @@ def judge_answer(req: JudgeRequest):
 请判断并输出 JSON。"""
     raw = call_llm(prompt, temperature=0.3, max_tokens=1000)
     if not raw:
-        return JudgeResponse(passed=True, feedback="AI 暂时不可用，答案已记录。", suggestions=[])
+        return JudgeResponse(
+            passed=False,
+            feedback="AI 判题服务暂时不可用，请检查 API Key 配置或网络连接。你的答案已记录，稍后可以重试。",
+            suggestions=["检查 teacher/.env 中 LLM_API_KEY 是否正确配置"],
+        )
 
     try:
         parsed = json.loads(raw)

@@ -31,7 +31,17 @@ def call_llm(prompt: str, temperature: float = 0.5, max_tokens: int = 2000) -> s
                 },
             )
             resp.raise_for_status()
-            return resp.json()["choices"][0]["message"]["content"]
+            content = resp.json()["choices"][0]["message"]["content"]
+            if not content or not content.strip():
+                logger.warning("LLM returned empty content")
+                return None
+            return content
+    except httpx.HTTPStatusError as e:
+        logger.error(f"LLM HTTP error: {e.response.status_code} {e.response.text[:200]}")
+        return None
+    except httpx.TimeoutException:
+        logger.error("LLM call timed out after 120s")
+        return None
     except Exception as e:
         logger.error(f"LLM call failed: {e}")
         return None

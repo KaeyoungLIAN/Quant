@@ -5,7 +5,6 @@ from typing import Optional
 class ChapterProgress(BaseModel):
     chapter_key: str
     status: str                     # locked | in_progress | completed
-    sub_items_done: list[str]       # ["mcq_1", "mcq_3", "essay_1"]
 
 
 class ProgressResponse(BaseModel):
@@ -15,7 +14,6 @@ class ProgressResponse(BaseModel):
 
 class AdvanceRequest(BaseModel):
     chapter_key: str
-    sub_item: str                   # "mcq_1" | "essay_1"
 
 
 class JudgeRequest(BaseModel):

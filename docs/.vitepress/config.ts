@@ -23,13 +23,18 @@ export default defineConfig({
     logo: '/logo.svg',
 
     nav: [
-      { text: '首页', link: '/' },
-      { text: '学习路线', link: '/learn/' },
-      { text: '量化金融', link: '/quant-finance/' },
-      { text: '前置数学知识', link: '/prerequisite-math/' },
-      { text: 'AI 技术与工具', link: '/ai/' },
-      { text: '技术栈', link: '/tech-stack/' },
-      { text: '资源收藏', link: '/resources/' },
+      { text: '🏠 首页', link: '/' },
+      { text: '📚 学习路线', link: '/learn/' },
+      {
+        text: '📖 知识库',
+        items: [
+          { text: '量化金融', link: '/quant-finance/' },
+          { text: '前置数学知识', link: '/prerequisite-math/' },
+          { text: 'AI 技术与工具', link: '/ai/' },
+        ],
+      },
+      { text: '🛠️ 技术栈', link: '/tech-stack/' },
+      { text: '📎 资源收藏', link: '/resources/' },
     ],
 
     sidebar: {

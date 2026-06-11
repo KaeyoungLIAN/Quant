@@ -11,28 +11,24 @@ hero:
     alt: Quant Learning
   actions:
     - theme: brand
-      text: 学习路线
+      text: 🚀 开始学习
+      link: /learn/01-getting-started/01-setup
+    - theme: alt
+      text: 📋 查看完整路线
       link: /learn/
-    - theme: alt
-      text: 知识文库
-      link: /quant-finance/
-    - theme: alt
-      text: GitHub
-      link: https://github.com/KaeyoungLIAN/Quant
 
 features:
-  - title: 📈 量化金融
-    details: 策略模型、回测框架、风险管理、市场微观结构。从基础概念到实战经验，系统化整理。
-    link: /quant-finance/
-  - title: 🤖 AI 技术与工具
-    details: LLM、AI Agent、RAG、数据爬取分析。关注与量化交易结合的前沿 AI 工具。
-    link: /ai/
-  - title: 🛠️ 技术栈
-    details: Python 生态、Django、React、数据库、部署运维。量化系统的工程实践笔记。
-    link: /tech-stack/
-  - title: 📚 资源收藏
-    details: 优质书籍、论文、博客、数据集、开源项目。持续更新的学习资料索引。
-    link: /resources/
+  - title: 📚 7 章线性学习路线
+    details: 从装 Python 到写策略，33 节课循序渐进。学完一节自动解锁下一节，学习进度一目了然。
+    link: /learn/
+  - title: 🤖 AI 助教随时答疑
+    details: 学习中遇到不懂的概念？点击右下角机器人，直接问。支持数学公式和代码示例。
+  - title: 🧮 数学从零到实战
+    details: 跟 MIT 18.S096 课程路线走，线性代数→概率论→随机过程，每个理论都有量化金融案例。
+    link: /learn/03-math-toolbox/00-overview
+  - title: 📊 代码驱动学习
+    details: 每章都有可运行的 Python 代码和回测练习。先跑通，再理解，最后独立构建策略。
+    link: /learn/04-python-quant/
 ---
 
 <ProgressCard />
