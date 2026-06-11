@@ -3,22 +3,22 @@
 layout: home
 
 hero:
-  name: "Quant Wiki"
-  text: "量化金融 & AI 技术知识库"
-  tagline: 系统化整理量化交易、人工智能、技术栈的笔记与资源
+  name: "Quant Learning"
+  text: "系统化学习量化交易"
+  tagline: 从零到独立策略开发，数学→编程→金融→实战，一步一个脚印
   image:
     src: /hero.svg
-    alt: Quant Wiki
+    alt: Quant Learning
   actions:
     - theme: brand
-      text: 开始阅读
+      text: 开始学习
+      link: /learn/
+    - theme: alt
+      text: 知识文库
       link: /quant-finance/
     - theme: alt
-      text: 前置数学知识
+      text: 数学起步
       link: /prerequisite-math/
-    - theme: alt
-      text: AI 工具
-      link: /ai/
     - theme: alt
       text: GitHub
       link: https://github.com/KaeyoungLIAN/Quant

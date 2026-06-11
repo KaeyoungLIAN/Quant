@@ -1,7 +1,7 @@
 {
-  "name": "quant-wiki",
+  "name": "quant-learning",
   "version": "1.0.0",
-  "description": "量化 & AI 技术知识库",
+  "description": "从零到专业：量化交易系统性学习平台",
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",

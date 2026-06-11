@@ -3,8 +3,8 @@ import { katex } from '@mdit/plugin-katex'
 
 export default defineConfig({
   ignoreDeadLinks: true,
-  title: 'Quant Wiki',
-  description: '量化 & AI 技术知识库',
+  title: 'Quant Learning',
+  description: '从零到专业：量化交易系统性学习平台',
   lang: 'zh-CN',
 
   head: [
@@ -38,7 +38,6 @@ export default defineConfig({
           text: '01 量化交易基础',
           collapsed: true,
           items: [
-            { text: '1.0 概述', link: '/quant-finance/01.0-overview' },
             { text: '1.0 量化交易的本质', link: '/quant-finance/1.0-overview' },
             { text: '1.1 交易品种', link: '/quant-finance/1.1-market-instruments' },
             { text: '1.2 订单类型与市场机制', link: '/quant-finance/1.2-order-types' },
@@ -253,10 +252,72 @@ export default defineConfig({
       ],
       '/learn/': [
         {
-          text: '学习路线',
+          text: '📚 量化学习体系',
           items: [
-            { text: '🗺️ 路线总览', link: '/learn/' },
-            { text: '📝 学习记录', link: '/learn/records' },
+            { text: '🗺️ 总览', link: '/learn/' },
+          ],
+        },
+        {
+          text: 'Part 0: Python + 数学预备',
+          collapsed: true,
+          items: [
+            { text: '🗺️ 总览', link: '/learn/part-0-python-math/' },
+            { text: '0.1 线性代数与向量化 (L1+L2)', link: '/learn/part-0-python-math/01-linear-algebra' },
+            { text: '0.2 概率与蒙特卡洛 (L3)', link: '/learn/part-0-python-math/02-probability-monte-carlo' },
+            { text: '0.3 矩阵分解与SVD (L4)', link: '/learn/part-0-python-math/03-matrix-factorization' },
+            { text: '0.4 随机过程与布朗运动 (L5)', link: '/learn/part-0-python-math/04-stochastic-processes' },
+            { text: '0.5 回归分析与假设检验 (L6)', link: '/learn/part-0-python-math/05-regression' },
+            { text: '0.6 VaR与商品模型 (L7+L13)', link: '/learn/part-0-python-math/06-var-commodity' },
+            { text: '0.7 时间序列分析 (L8+L11+L12)', link: '/learn/part-0-python-math/07-time-series' },
+            { text: '0.8 波动率建模 (L9)', link: '/learn/part-0-python-math/08-volatility' },
+            { text: '0.9 正则化与风险模型 (L10)', link: '/learn/part-0-python-math/09-regularization' },
+            { text: '0.10 组合理论与CAPM (L14-16)', link: '/learn/part-0-python-math/10-portfolio-theory' },
+          ],
+        },
+        {
+          text: 'Part 1: 量化回测基础',
+          collapsed: true,
+          items: [
+            { text: '1.1 从数据到K线', link: '/learn/part-1-backtest/01-from-data-to-candles' },
+            { text: '1.2 第一个回测', link: '/learn/part-1-backtest/02-first-backtest' },
+            { text: '1.3 绩效指标', link: '/learn/part-1-backtest/03-performance-metrics' },
+          ],
+        },
+        {
+          text: 'Part 2: 因子与策略',
+          collapsed: true,
+          items: [
+            { text: '2.1 趋势跟踪', link: '/learn/part-2-strategies/01-trend-following' },
+            { text: '2.2 均值回归', link: '/learn/part-2-strategies/02-mean-reversion' },
+            { text: '2.3 统计套利', link: '/learn/part-2-strategies/03-statistical-arbitrage' },
+            { text: '2.4 多因子组合', link: '/learn/part-2-strategies/04-multifactor-combination' },
+          ],
+        },
+        {
+          text: 'Part 3: 回测与风险',
+          collapsed: true,
+          items: [
+            { text: '3.1 过拟合与交叉验证', link: '/learn/part-3-risk/01-overfitting-cv' },
+            { text: '3.2 风险分析框架', link: '/learn/part-3-risk/02-risk-analysis' },
+            { text: '3.3 策略诊断', link: '/learn/part-3-risk/03-strategy-diagnosis' },
+          ],
+        },
+        {
+          text: 'Part 4: 机器学习因子',
+          collapsed: true,
+          items: [
+            { text: '4.1 特征工程', link: '/learn/part-4-ml/01-feature-engineering' },
+            { text: '4.2 XGBoost 因子', link: '/learn/part-4-ml/02-xgboost-factor' },
+            { text: '4.3 LSTM', link: '/learn/part-4-ml/03-lstm' },
+          ],
+        },
+        {
+          text: 'Part 5: 实战冲刺',
+          collapsed: true,
+          items: [
+            { text: '5.1 数据源与API', link: '/learn/part-5-live/01-data-sources' },
+            { text: '5.2 执行与资金管理', link: '/learn/part-5-live/02-execution-capital' },
+            { text: '5.3 毕业设计', link: '/learn/part-5-live/03-graduation-project' },
           ],
         },
       ],

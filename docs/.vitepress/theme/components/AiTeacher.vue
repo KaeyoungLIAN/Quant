@@ -9,7 +9,7 @@
     <div v-else class="panel">
       <!-- Header -->
       <div class="panel-header">
-        <span>🧠 Quant Teacher</span>
+        <span>🧠 Quant Learning</span>
         <button class="close-btn" @click="open = false">✕</button>
       </div>
 
@@ -89,7 +89,7 @@
 <script setup>
 import { ref, nextTick, watch } from 'vue'
 
-const API_BASE = import.meta.env.VITE_TEACHER_API || 'http://localhost:8000'
+const API_BASE = ''
 
 // State
 const open = ref(false)
@@ -104,9 +104,19 @@ const currentLesson = ref(null)
 const lessonLoading = ref(false)
 const lessonError = ref('')
 
-const token = ref(localStorage.getItem('quant_teacher_token') || '')
-const username = ref(localStorage.getItem('quant_teacher_username') || '')
-const userId = ref(Number(localStorage.getItem('quant_teacher_user_id') || 0))
+const token = ref('')
+const username = ref('')
+const userId = ref(0)
+
+// Load saved auth state on mount (client-side only)
+function loadAuth() {
+  if (typeof localStorage !== 'undefined') {
+    token.value = localStorage.getItem('quant_teacher_token') || ''
+    username.value = localStorage.getItem('quant_teacher_username') || ''
+    userId.value = Number(localStorage.getItem('quant_teacher_user_id') || 0)
+  }
+}
+loadAuth()
 
 // Helpers
 const moduleName = (key) => {

@@ -1,4 +1,7 @@
 docs/.vitepress/cache/
 docs/.vitepress/dist/
 node_modules/
-teacher/
+teacher/venv/
+teacher/*.db
+teacher/__pycache__/
+*.pyc
