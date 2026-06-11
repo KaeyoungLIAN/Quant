@@ -164,8 +164,8 @@ def advance_progress(req: AdvanceRequest, db: Session = Depends(get_db)):
         p.sub_items_done = json.dumps(sub_items)
         p.updated_at = func.now()
 
-    # Mark chapter completed if any sub_item passed (simple for now)
-    p.status = "in_progress"
+    # Mark chapter completed on any advance
+    p.status = "completed"
     db.commit()
 
     return {"ok": True, "chapter_key": req.chapter_key, "sub_items_done": sub_items}
@@ -250,6 +250,9 @@ async def serve_spa(request: Request, path: str):
     if path.startswith("api/"):
         return JSONResponse({"detail": "Not Found"}, status_code=404)
     file_path = _static_dir / path
+    # Try with .html suffix (for cleanUrls builds)
+    if not (file_path.exists() and file_path.is_file()):
+        file_path = _static_dir / f"{path}.html"
     if file_path.exists() and file_path.is_file():
         return FileResponse(str(file_path))
     index_path = _static_dir / "index.html"
